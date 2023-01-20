@@ -2,3 +2,22 @@ spring:
   application:
     name: mega-app
     team: dream-team
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+---
+spring:
+  config:
+    activate:
+      on-profile: stg
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+
