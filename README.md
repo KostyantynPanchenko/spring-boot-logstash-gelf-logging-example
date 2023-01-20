@@ -1,5 +1,33 @@
 # Getting Started
 
+## Starting ELK stack locally
+
+The easiest way is to start ELK stack via `docker-compose`. You can use the following repo to get ELK up and running - [Elastic stack (ELK) on Docker](https://github.com/deviantony/docker-elk).
+
+After initial setup is done - login to [Kibana](http://localhost:5601), then:
+* navigate to [Management -> Ingest -> Logstash Pipelines](http://localhost:5601/app/management/ingest/pipelines/pipeline)
+* hit `Create Pipeline` button
+* in the `pipeline` window paste
+```shell
+input { 
+    tcp {
+        port => 50000
+    }
+}
+
+output {
+    elasticsearch {
+        hosts => "elasticsearch:9200"
+        user => "logstash_internal"
+        password => "changeme"
+    }
+}
+```
+* restart the stack
+* start the app
+* open [Kibana](http://localhost:5601) and navigate to [Analytics -> Discover](http://localhost:5601/app/discover)
+* observe the logs from the app
+
 ### Reference Documentation
 For further reference, please consider the following sections:
 
