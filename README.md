@@ -28,6 +28,12 @@ output {
 * open [Kibana](http://localhost:5601) and navigate to [Analytics -> Discover](http://localhost:5601/app/discover)
 * observe the logs from the app
 
+## Useful Documentation
+
+* [CENTRALIZED LOG MANAGEMENT (GRAYLOG, LOGSTASH, FLUENTD)](https://quarkus.io/guides/centralized-log-management)
+* [Elastic Stack and GELF](https://docs.revenera.com/fne/2021_09/adminguide/content/helplibrary/Elastic_Stack_and_GELF.htm)
+* [Graylog Extended Format logging driver](https://docs.docker.com/config/containers/logging/gelf/)
+
 ### Reference Documentation
 For further reference, please consider the following sections:
 
